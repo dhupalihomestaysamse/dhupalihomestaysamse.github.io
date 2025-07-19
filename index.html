@@ -3,7 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhupali Homestay - Your Home Away From Home</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Dhupali Homestay Samse - Best Homestay in Karnataka | Affordable Accommodation near Shantinatha Temple</title>
+    <meta name="description" content="Experience authentic hospitality at Dhupali Homestay in Samse, Karnataka. Located near Sri Shantinatha Digambara temple. Comfortable rooms, local cuisine, trekking tours. Book now!">
+    <meta name="keywords" content="Dhupali Homestay, Samse homestay, Karnataka homestay, budget accommodation Samse, Shantinatha temple stay, Kalasa homestay, Western Ghats accommodation, trekking Samse, nature retreat Karnataka">
+    <meta name="author" content="Dhupali Homestay">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Dhupali Homestay Samse - Your Home Away From Home">
+    <meta property="og:description" content="Tranquil, welcoming homestay with modern comforts in the heart of Samse, Karnataka. Experience nature, local cuisine, and authentic hospitality.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dhupalihomestay.com">
+    <meta property="og:image" content="https://www.dhupalihomestay.com/images/homestay-hero.jpg">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dhupali Homestay Samse - Best Homestay in Karnataka">
+    <meta name="twitter:description" content="Experience authentic hospitality at Dhupali Homestay in Samse, Karnataka. Comfortable rooms, local cuisine, trekking tours.">
+    <meta name="twitter:image" content="https://www.dhupalihomestay.com/images/homestay-hero.jpg">
+    
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Dhupali Homestay",
+      "description": "Authentic homestay experience in Samse, Karnataka with comfortable accommodation and local hospitality",
+      "url": "https://www.dhupalihomestay.com",
+      "telephone": ["+91-9483402518", "+91-9380247814"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shweni Nilaya, beside Sri 1008 Bhagawan Shantinatha Digambara temple",
+        "addressLocality": "Samse",
+        "addressRegion": "Karnataka",
+        "postalCode": "577124",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "13.2172",
+        "longitude": "75.0653"
+      },
+      "openingHours": "Mo-Su 00:00-24:00",
+      "priceRange": "$$",
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "4.5"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free WiFi"
+        },
+        {
+          "@type": "LocationFeatureSpecification", 
+          "name": "Local Cuisine"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Trekking Tours"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "24/7 Check-in"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
     <style>
         * {
             margin: 0;
@@ -15,6 +89,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            overflow-x: hidden;
         }
 
         .container {
@@ -33,23 +108,27 @@
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
+            flex-shrink: 0;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
@@ -58,6 +137,7 @@
             transition: all 0.3s ease;
             padding: 0.5rem 1rem;
             border-radius: 25px;
+            white-space: nowrap;
         }
 
         .nav-links a:hover {
@@ -70,27 +150,32 @@
             background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f8ff" width="1200" height="600"/><path fill="%23e6f3ff" d="M0,400 Q300,350 600,400 T1200,400 V600 H0 Z"/></svg>');
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
             position: relative;
+            padding: 2rem 0;
         }
 
         .hero-content {
             animation: fadeInUp 1s ease;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
             margin-bottom: 2rem;
             max-width: 600px;
             margin-left: auto;
@@ -129,20 +214,22 @@
         }
 
         .about-text h2 {
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 4vw, 2.5rem);
             margin-bottom: 1.5rem;
             color: #2c3e50;
+            line-height: 1.2;
         }
 
         .about-text p {
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
             color: #555;
+            text-align: justify;
         }
 
         .about-image {
             background: linear-gradient(45deg, #667eea, #764ba2);
-            height: 400px;
+            min-height: 400px;
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -151,6 +238,7 @@
             font-size: 1.2rem;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 2rem;
         }
 
         /* Accommodation Section */
@@ -161,15 +249,17 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 4vw, 2.5rem);
             margin-bottom: 3rem;
             color: #2c3e50;
+            line-height: 1.2;
         }
 
         .room-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
+            justify-items: center;
         }
 
         .room-card {
@@ -178,6 +268,8 @@
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
+            width: 100%;
+            max-width: 380px;
         }
 
         .room-card:hover {
@@ -194,6 +286,7 @@
             color: white;
             font-size: 1.1rem;
             text-align: center;
+            padding: 1rem;
         }
 
         .room-content {
@@ -209,12 +302,14 @@
         .room-content p {
             color: #666;
             margin-bottom: 1rem;
+            text-align: justify;
         }
 
         .room-price {
-            font-size: 0.65rem;
+            font-size: 0.9rem;
             font-weight: bold;
             color: #667eea;
+            line-height: 1.4;
         }
 
         /* Contact Section */
@@ -228,6 +323,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
+            align-items: start;
         }
 
         .contact-info h3 {
@@ -237,7 +333,7 @@
 
         .contact-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             margin-bottom: 1.5rem;
             padding: 1rem;
             background: rgba(255,255,255,0.1);
@@ -260,6 +356,7 @@
             justify-content: center;
             margin-right: 1rem;
             font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         .contact-item a {
@@ -277,17 +374,16 @@
             border-radius: 20px;
             padding: 2rem;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
         }
 
-        .map-placeholder {
-            background: rgba(255,255,255,0.2);
-            height: 300px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
+        .map-container h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
         }
 
         .map-link {
@@ -298,6 +394,8 @@
             text-decoration: none;
             border-radius: 50px;
             transition: all 0.3s ease;
+            font-size: 1.1rem;
+            font-weight: 500;
         }
 
         .map-link:hover {
@@ -326,56 +424,121 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
+        @media (max-width: 1024px) {
             .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 80vh;
+                padding: 4rem 0 2rem;
+            }
+
+            .hero h1 {
+                margin-top: 2rem;
+            }
+
+            .about,
+            .accommodation,
+            .contact {
+                padding: 3rem 0;
+            }
 
             .room-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
+
+            .contact-item {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .contact-icon {
+                margin-bottom: 0;
+            }
+
+            .map-container {
+                margin-top: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .room-content {
+                padding: 1rem;
+            }
+
+            .contact-item {
+                padding: 0.75rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* Performance optimizations */
+        .room-card,
+        .contact-item,
+        .cta-button,
+        .map-link {
+            will-change: transform;
+        }
+
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus states for better accessibility */
+        a:focus,
+        .cta-button:focus,
+        .map-link:focus {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav class="container">
+    <header role="banner">
+        <nav class="container" role="navigation" aria-label="Main navigation">
             <div class="logo">🏡 Dhupali Homestay</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#accommodation">Rooms</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" aria-label="Go to home section">Home</a></li>
+                <li><a href="#about" aria-label="Learn about us">About</a></li>
+                <li><a href="#accommodation" aria-label="View our rooms">Rooms</a></li>
+                <li><a href="#contact" aria-label="Contact information">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" role="banner">
         <div class="hero-content">
             <h1>Welcome to Dhupali Homestay</h1>
             <p>Tranquil, welcoming haven with modern comforts that meets hospitality in the heart of Samse!</p>
-            <a href="https://www.youtube.com/watch?v=PeTkw_KD9F8" target="_blank" class="cta-button">Homestay YouTube Preview</a>
+            <a href="https://www.youtube.com/watch?v=PeTkw_KD9F8" target="_blank" class="cta-button" rel="noopener" aria-label="Watch Dhupali Homestay preview video on YouTube">Homestay YouTube Preview</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about" role="main">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
@@ -388,7 +551,7 @@
                     
                     <p><strong>Adventure & Tours:</strong> Embark on thrilling trekking and captivating sightseeing tours, all conveniently located near our homestay. Our expert guides will accompany you on exciting trails, unveiling hidden gems, breathtaking viewpoints, and cascading waterfalls of the region.</p>
                 </div>
-                <div class="about-image">
+                <div class="about-image" role="img" aria-label="Homestay amenities overview">
                     <div>
                         <h3>🏠 Comfortable Rooms</h3>
                         <p>Well-maintained spaces with contemporary attached bathrooms</p>
@@ -408,12 +571,12 @@
     </section>
 
     <!-- Accommodation Section -->
-    <section id="accommodation" class="accommodation">
+    <section id="accommodation" class="accommodation" role="main">
         <div class="container">
             <h2 class="section-title">Our Accommodation Options</h2>
             <div class="room-grid">
-                <div class="room-card">
-                    <div class="room-image">
+                <article class="room-card">
+                    <div class="room-image" role="img" aria-label="Single room amenities">
                         <div>
                             <h3>🛏️ Cozy Single Room</h3>
                             <p>Perfect for solo travelers</p>
@@ -424,10 +587,10 @@
                         <p>A comfortable single room with all essential amenities. Features a cozy bed, work desk, private bathroom, and complimentary Wi-Fi. Perfect for business travelers or solo adventurers.</p>
                         <div class="room-price">The rates vary depending on the season and availability. You will be given the current competitive rate when you call to book.</div>
                     </div>
-                </div>
+                </article>
 
-                <div class="room-card">
-                    <div class="room-image">
+                <article class="room-card">
+                    <div class="room-image" role="img" aria-label="Double room amenities">
                         <div>
                             <h3>🛏️🛏️ Deluxe Double Room</h3>
                             <p>Spacious comfort for couples</p>
@@ -438,10 +601,10 @@
                         <p>Spacious double room with queen-size bed, sitting area, and beautiful garden view. Includes private bathroom, air conditioning, and access to our shared kitchen and living spaces.</p>
                         <div class="room-price">The rates vary depending on the season and availability. You will be given the current competitive rate when you call to book.</div>
                     </div>
-                </div>
+                </article>
 
-                <div class="room-card">
-                    <div class="room-image">
+                <article class="room-card">
+                    <div class="room-image" role="img" aria-label="Family suite amenities">
                         <div>
                             <h3>👨‍👩‍👧‍👦 Family Suite</h3>
                             <p>Perfect for families</p>
@@ -452,28 +615,28 @@
                         <p>Our largest accommodation featuring separate sleeping areas, family bathroom, mini-kitchenette, and private balcony. Ideal for families or groups of up to 6 people. For a group of 10+ guests, additional cot and bedding is available in the big common hall to the bedrooms in second floor.</p>
                         <div class="room-price">The rates vary depending on the season and availability. You will be given the current competitive rate when you call to book.</div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" role="contentinfo">
         <div class="container">
             <h2 class="section-title">Contact Us</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
                     <div class="contact-item">
-                        <div class="contact-icon">📞</div>
+                        <div class="contact-icon" aria-hidden="true">📞</div>
                         <div>
                             <strong>Phone:</strong><br>
-                            <a href="tel:+919483402518">+91-9483402518</a><br>
-                            <a href="tel:+919380247814">+91-9380247814</a>
+                            <a href="tel:+919483402518" aria-label="Call +91-9483402518">+91-9483402518</a><br>
+                            <a href="tel:+919380247814" aria-label="Call +91-9380247814">+91-9380247814</a>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">📍</div>
+                        <div class="contact-icon" aria-hidden="true">📍</div>
                         <div>
                             <strong>Address:</strong><br>
                             Dhupali Homestay Samse<br>
@@ -482,7 +645,7 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">🕒</div>
+                        <div class="contact-icon" aria-hidden="true">🕒</div>
                         <div>
                             <strong>Check-in & Check-out:</strong> Open 24x7
                         </div>
@@ -490,7 +653,7 @@
                 </div>
                 <div class="map-container">
                     <h3>Find Us</h3>
-                    <a href="https://maps.app.goo.gl/y2vxWzh5UjssPTvc6" target="_blank" class="map-link">
+                    <a href="https://maps.app.goo.gl/y2vxWzh5UjssPTvc6" target="_blank" class="map-link" rel="noopener" aria-label="Open Dhupali Homestay location in Google Maps">
                         📱 Open in Google Maps
                     </a>
                 </div>
@@ -499,7 +662,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <p>&copy; 2025 Dhupali Homestay. All rights reserved. | Your home away from home.</p>
         </div>
@@ -530,7 +693,7 @@
             }
         });
 
-        // Add animation on scroll
+        // Add animation on scroll with Intersection Observer
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -545,12 +708,21 @@
             });
         }, observerOptions);
 
+        // Apply observer to elements
         document.querySelectorAll('.room-card, .about-text, .contact-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
         });
+
+        // Performance: Lazy loading for better Core Web Vitals
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[data-src]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        }
     </script>
 </body>
 </html>
