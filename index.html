@@ -79,6 +79,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
@@ -86,10 +88,11 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #2c3e50;
             overflow-x: hidden;
+            font-weight: 400;
         }
 
         .container {
@@ -100,15 +103,16 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.95) 0%, rgba(52, 73, 94, 0.95) 100%);
             color: white;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         nav {
@@ -120,8 +124,10 @@
 
         .logo {
             font-size: 1.8rem;
-            font-weight: bold;
+            font-weight: 600;
             flex-shrink: 0;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
         }
 
         .nav-links {
@@ -135,21 +141,26 @@
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
             white-space: nowrap;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
         }
 
         .nav-links a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-1px);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f8ff" width="1200" height="600"/><path fill="%23e6f3ff" d="M0,400 Q300,350 600,400 T1200,400 V600 H0 Z"/></svg>');
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.6), rgba(52, 73, 94, 0.6)), url('images/homestay-hero.jpg');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -168,42 +179,53 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
             line-height: 1.2;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -1px;
         }
 
         .hero p {
-            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-            margin-bottom: 2rem;
-            max-width: 600px;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            margin-bottom: 2.5rem;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
+            font-weight: 400;
+            line-height: 1.7;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
         }
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
+            border-radius: 8px;
+            font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(231, 76, 60, 0.3);
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+            background: linear-gradient(45deg, #c0392b, #a93226);
         }
 
         /* About Section */
         .about {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
         .about-content {
@@ -214,45 +236,53 @@
         }
 
         .about-text h2 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 1.5rem;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 2rem;
             color: #2c3e50;
             line-height: 1.2;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
         }
 
         .about-text p {
             font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: #555;
+            margin-bottom: 1.8rem;
+            color: #495057;
             text-align: justify;
+            line-height: 1.8;
+            font-weight: 400;
         }
 
         .about-image {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            min-height: 400px;
-            border-radius: 20px;
+            background: linear-gradient(45deg, #2c3e50, #34495e);
+            min-height: 450px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            padding: 2rem;
+            box-shadow: 0 15px 35px rgba(44, 62, 80, 0.15);
+            padding: 2.5rem;
         }
 
         /* Accommodation Section */
         .accommodation {
-            padding: 5rem 0;
-            background: white;
+            padding: 6rem 0;
+            background: #ffffff;
         }
 
         .section-title {
             text-align: center;
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 3rem;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 3.5rem;
             color: #2c3e50;
             line-height: 1.2;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: -0.5px;
         }
 
         .room-grid {
@@ -264,22 +294,23 @@
 
         .room-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 25px rgba(44, 62, 80, 0.08);
             transition: all 0.3s ease;
             width: 100%;
             max-width: 380px;
+            border: 1px solid rgba(44, 62, 80, 0.05);
         }
 
         .room-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(44, 62, 80, 0.12);
         }
 
         .room-image {
             height: 250px;
-            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            background: linear-gradient(45deg, #34495e, #2c3e50);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -290,32 +321,36 @@
         }
 
         .room-content {
-            padding: 1.5rem;
+            padding: 2rem 1.5rem;
         }
 
         .room-content h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
             color: #2c3e50;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
         }
 
         .room-content p {
-            color: #666;
-            margin-bottom: 1rem;
+            color: #6c757d;
+            margin-bottom: 1.5rem;
             text-align: justify;
+            line-height: 1.7;
+            font-size: 1.05rem;
         }
 
         .room-price {
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: #667eea;
-            line-height: 1.4;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #e74c3c;
+            line-height: 1.5;
         }
 
         /* Contact Section */
         .contact {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
             color: white;
         }
 
@@ -327,88 +362,102 @@
         }
 
         .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
         }
 
         .contact-item {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
+            margin-bottom: 1.8rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
             transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .contact-item:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateX(10px);
+            background: rgba(255,255,255,0.12);
+            transform: translateX(8px);
         }
 
         .contact-icon {
             width: 50px;
             height: 50px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 1rem;
+            margin-right: 1.2rem;
             font-size: 1.2rem;
             flex-shrink: 0;
         }
 
         .contact-item a {
-            color: white;
+            color: #ecf0f1;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            font-weight: 500;
         }
 
         .contact-item a:hover {
             text-decoration: underline;
+            color: white;
         }
 
         .map-container {
-            background: rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: 2rem;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 2.5rem;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 200px;
+            min-height: 220px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .map-container h3 {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
         }
 
         .map-link {
             display: inline-block;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.15);
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 8px;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
-            font-weight: 500;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
         .map-link:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.25);
             transform: translateY(-2px);
+            border-color: rgba(255,255,255,0.3);
         }
 
         /* Footer */
         footer {
-            background: #2c3e50;
-            color: white;
+            background: #1a252f;
+            color: #bdc3c7;
             text-align: center;
-            padding: 2rem 0;
+            padding: 2.5rem 0;
+            font-size: 0.95rem;
         }
 
         /* Animations */
@@ -687,9 +736,9 @@
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%)';
+                header.style.background = 'linear-gradient(135deg, rgba(44, 62, 80, 0.98) 0%, rgba(52, 73, 94, 0.98) 100%)';
             } else {
-                header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                header.style.background = 'linear-gradient(135deg, rgba(44, 62, 80, 0.95) 0%, rgba(52, 73, 94, 0.95) 100%)';
             }
         });
 
@@ -725,4 +774,3 @@
         }
     </script>
 </body>
-</html>
